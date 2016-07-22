@@ -63,6 +63,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)setDataArray:(NSMutableArray<LCCKMessage *> *)dataArray
+{
+    _dataArray = dataArray;
+}
+
 #pragma mark - UITableViewDataSource & UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -71,6 +76,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LCCKMessage *message = self.dataArray[indexPath.row];
+    NSLog(@"%d",message.messageMediaType);
     NSString *identifier = [LCCKCellIdentifierFactory cellIdentifierForMessageConfiguration:message];
     LCCKChatMessageCell *messageCell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     messageCell.tableView = self.parentConversationViewController.tableView;

@@ -46,6 +46,9 @@
     [tableView registerClass:[MMPacketCell class] forCellReuseIdentifier:@"LCCKChatMessageCell_OwnerSystem_TypePacket_SingleCell"];
     [tableView registerClass:[MMPacketCell class] forCellReuseIdentifier:@"LCCKChatMessageCell_OwnerSelf_TypePacket_GroupCell"];
     [tableView registerClass:[MMPacketCell class] forCellReuseIdentifier:@"LCCKChatMessageCell_OwnerSelf_TypePacket_SingleCell"];
+    [tableView registerClass:[MMPacketCell class] forCellReuseIdentifier:@"LCCKChatMessageCell_OwnerOther_TypePacket_SingleCell"];
+    [tableView registerClass:[MMPacketCell class] forCellReuseIdentifier:@"LCCKChatMessageCell_OwnerOther_TypePacket_GroupCell"];
+    
 }
 
 @end

@@ -17,6 +17,7 @@
 #endif
 #import "AVIMConversation+LCCKAddition.h"
 #import "UIImage+LCCKExtension.h"
+#import "MMPacketMessage.h"
 //#define LCCKIsDebugging 1
 
 @interface LCCKMessage()
@@ -307,7 +308,12 @@
             lcckMessage = [[LCCKMessage alloc] initWithPhoto:nil thumbnailPhoto:nil photoPath:imagePath thumbnailURL:nil originPhotoURL:[NSURL URLWithString:imageMsg.file.url] userId:userId user:user timestamp:time];
             break;
         }
-            
+        case kAVIMMessageMediaTypePacket: {
+            MMPacketMessage *packetMsg = (MMPacketMessage *)message;
+            NSInteger money = [packetMsg.attributes[@"money"] integerValue];
+            lcckMessage = [[LCCKMessage alloc] initWithMoney:money userId:userId user:user];
+            break;
+        }
             //#import "AVIMEmotionMessage.h"
             //        case kAVIMMessageMediaTypeEmotion: {
             //            AVIMEmotionMessage *emotionMsg = (AVIMEmotionMessage *)message;

@@ -26,8 +26,8 @@
 
 #warning TODO: CHANGE TO YOUR AppId and AppKey
 
-static NSString *const LCCKAPPID = @"dYRQ8YfHRiILshUnfFJu2eQM-gzGzoHsz";
-static NSString *const LCCKAPPKEY = @"ye24iIK6ys8IvaISMC4Bs5WK";
+static NSString *const LCCKAPPID = @"G1jznQ0xT5FtS2c32JDg9iwp-gzGzoHsz";
+static NSString *const LCCKAPPKEY = @"ud7SWKAEiFT3VMdzhhQPQXpW";
 //static NSString *const LCCKAPPID = @"eBLWvezQIK0XbGoyhUAn614d-gzGzoHsz";
 //static NSString *const LCCKAPPKEY = @"cjAQu6MAIVbxwihONRX3Ulx6";
 // Dictionary that holds all instances of Singleton include subclasses
